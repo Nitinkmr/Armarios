@@ -1,0 +1,410 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+#services img,#about img,#team div img{
+	transition: all .7s;
+}
+#services img:hover,#about img:hover{
+	transform: scale(1.2) rotate(360deg);
+}
+#page-headers nav ul li a:hover{
+	transform: scale(1.2);
+	color:rgb(255, 200, 0);	
+}
+#portfolio div,#team div img+h3,button{
+	transition: all .7s;
+}
+#portfolio div:hover,button:hover{
+	transform: scale(1.2);	
+}
+#team div img:hover+h3{
+	transform: scale(1.7);	
+}
+#team div img:hover{
+	border: 6px solid rgb(255, 200, 0);
+}
+body{
+	width: 100%;
+}
+#home{
+	background-image: url("header-bg.jpg");
+	background-size: cover;
+	background-repeat:no-repeat; 
+	width: 100%;
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+}
+#page-headers{
+	display: flex;
+	padding-top: 3.5%;
+	justify-content: space-around;
+}
+#page-headers ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+#page-headers ul li{
+	padding-left: 7%;
+	font-size: 14;
+	font-family: 'Montserrat', sans-serif; 
+}
+#page-headers ul li a{
+	color: white;
+}
+#page-headers-main{
+	align-items: center;
+	text-align: center;
+	padding-bottom: 10%;
+}
+#page-headers-main h1{
+	font-size: 40px;
+	font-family: 'Droid Serif';
+	font-style: italic;
+	color: white;
+	font-weight: normal;
+	margin-top: 12%;
+	margin-bottom: 4%;
+}
+#page-headers-main p{
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 75px;
+	margin-bottom: 4%;	
+}
+#page-headers-main button,#contact button{
+	text-align: center;
+	color: white;
+	background-color: rgb(255, 200, 0);
+	border-style: none;
+	padding: 15px 30px 15px 30px;
+	font-size: 18px;
+	border-radius: 2px;
+	font-family: 'Montserrat', sans-serif;
+}
+#body-main{
+	width: 80%;
+	margin: auto;
+}
+#services,#portfolio,#about,#team,#contact{
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 8%;
+}
+#services header,#portfolio header,#about header,#team header,#contact header{
+	margin-bottom:7%; 
+}
+#services header h2,#portfolio header h2,#about header h2,#team header h2,#contact header h2{
+	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 1%;
+}
+#services header p,#portfolio header p,#about header p, #team header p,#contact header p{
+	font-family: 'Droid Serif';
+	font-style: italic;
+	font-size: 16px;
+	color: grey;
+}
+#services main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#services main div{
+	width: 300px;
+	margin-bottom: 30px;
+}
+#services main h3{
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	margin: 7%;
+}
+#services main p{
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+	color: grey;
+}
+#portfolio,#team,#contact{
+	background-color: rgba(144,144,144,0.1);
+	margin-left: -15%;
+	margin-right: -12.5%; 
+	border: 1px solid transparent;	
+}
+#portfolio header{
+	width: 80%;
+	margin: auto;
+	margin-top: 10%;
+	margin-bottom: 7%;
+}
+#portfolio main, #team main{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+#portfolio main div{
+	background-color: white;
+	margin-bottom: 9%;	
+}
+#portfolio main div img{
+	width: 300px;
+	height: 300px;
+	padding-bottom: 15px;
+}
+#portfolio main h3{
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+}
+#portfolio main p{
+	font-size: 14px;
+	font-family: 'Droid Serif';
+	font-style: italic;
+	padding-bottom: 15px;
+	color: grey;
+}
+#clever-poster{
+}
+#about main div p,#about h3,#about button{
+	text-align: right;
+	font-family: 'Montserrat', sans-serif;
+}
+#about h3,#about button{
+	font-size: 18px;
+}
+#about main div p{
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+	color: grey;
+}
+#about main > div{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 7.5%;	
+}
+#about main > div:nth-child(2n){
+	flex-direction:row-reverse;
+}
+#about main > div:nth-child(2n) p,#about main > div:nth-child(2n) h3{
+	text-align: left;	
+}
+#about main > div > div{
+	width: 300px;
+}
+#about main div img{
+	width: 175px;
+	align-self: center;
+	height: 175px;
+	border-radius: 50%;
+	border:5px solid rgba(128, 128, 128, 0.29);
+}
+#about button{
+	width: 175px;
+	height: 175px;
+	text-align: center;
+	color: white;
+	background-color: rgb(255, 200, 0);
+	padding: 15px 30px 15px 30px;
+	font-size: 18px;
+	border-radius: 50%;
+	border:5px solid #EEE;
+	font-family: 'Montserrat', sans-serif;
+}
+#about{
+	position: relative;
+}
+#line{
+	position: absolute;
+	right: 50%;
+	width: 3px;
+	top: 20%;
+	height: 80%;
+	z-index: -5;
+	background-color: rgba(128, 128, 128, 0.19);
+}
+#team header{
+	margin-top: 10%;
+	margin-bottom: 7%;
+}
+#team main{
+	justify-content: space-around;
+}
+#team main div img{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	margin-bottom: 5%;
+}
+#team main h3{
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
+#team main h4{
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+	color: grey;
+	font-weight: normal;
+	font-style: italic;	
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+#team main ul{
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 20px;
+}
+.circle{
+	font-size: 30px;
+	padding-top: 4px; 
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	color: black;
+	border: 2px solid;
+	transition: all .7s;
+}
+.circle:hover{
+	transform: scale(1.5) rotate(360deg);
+}
+.fa-facebook:hover{
+	background-color:#3C599F;
+	border-color:#3C599F;
+	color: white;
+}
+.fa-twitter:hover{
+	background-color:#32CCFE;
+	border-color:#32CCFE;
+	color: white;
+}
+.fa-google-plus{
+	font-size: 25px;
+	padding-top: 6px;
+}
+.fa-google-plus:hover{
+	background-color:#CF3D2E;
+	color: white;
+	border-color:#CF3D2E;
+}
+.fa-pinterest:hover{
+	background-color:#CC2127;
+	color: white;
+	border-color:#CC2127;
+}
+#team main p{
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	color: grey;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+#media{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#media img{
+	height: 100%;
+	padding-left: 5%;
+	padding-bottom: 5%;
+}
+#contact{
+	background-image: url("contact-us-bg.jpg");
+	background-size: cover;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+#contact header h2{
+	color: white;
+	margin-top: 10%;
+}
+#contact button{
+	margin-bottom: 9%;
+}
+#page-footer{
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 1%;
+}
+#page-footer p{
+	align-items: center;
+	position: absolute;
+	left: 0;
+	padding: 1%;
+	font-size: 10px;
+	font-family: 'Droid Serif';
+	font-style: italic;
+	color: grey;
+}
+#page-footer ul{
+	display: flex;isplay: flex;
+	justify-self: center;
+	text-align: center;
+	align-items: center;	
+	justify-content: center;
+}
+#page-footer .circle{
+	font-size: 20px;
+	padding-top: 6px;
+	background-color: #272727;
+	color: white;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+}
+#page-footer .fa-facebook:hover{
+	background-color:#3C599F;
+	color: white;
+	border-color: #3C599F; 
+}
+#page-footer .fa-twitter:hover{
+	background-color:#32CCFE;
+	color: white;
+	border-color:#32CCFE;
+}
+#page-footer .fa-google-plus:hover{
+	background-color:#CF3D2E;
+	color: white;
+	border-color:#CF3D2E;
+}
+#page-footer .fa-pinterest:hover{
+	background-color:#CC2127;
+	border-color:#CC2127;
+	color: white;
+}
+.hide{
+	display: none;
+}
+@media screen and (max-width: 720px){
+	#about main > div{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column-reverse !important;
+	}
+	#about main div p,#about h3{
+		text-align: center !important;
+		margin: 7% 0 0 0 !important; 
+	}
+	#about main .about-img-desc{
+		display: block;
+		height: 0;
+		overflow: hidden;
+		transition: height 1s ease-in-out;
+	} 
+	#line{
+		display: none !important;
+	}
+	#about div:target .about-img-desc{
+		height: 143px;
+	}
+	#about div:target .show{
+		display: none !important;
+	}
+	#about div:target .hide{
+		display: block;
+	}
+}

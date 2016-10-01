@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Armarios</title>
+	<link href = "{% static 'common/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'common/css/base.css' %}">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+</head>
+<body>
+	<header id="home">
+		<div id="page-headers">
+			<img src="{% static 'common/images/main-logo.png' %}">
+			<nav>
+				<ul>
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#services">SERVICES</a></li>
+					<li><a href="#portfolio">PORTFOLIO</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="page-headers-main">
+			<h1>Welcome To Your Wardrobe!</h1>
+			<p>IT'S NICE TO MEET YOU</p>
+			<button>TELL ME MORE</button>
+		</div>  
+	</header>
+	<main id="body-main">
+		<section id="services">
+			<header>
+				<h2>SERVICES</h2>
+				<p>Nasrum Minnallahi Wafatahun Qareeb</p>
+			</header>
+			<main>
+				<div>
+					<img src="{% static 'common/images/e-commerce.png' %}">
+					<h3>E-Commerce</h3>
+					<p>Proin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequat</p>
+				</div>
+				<div>
+					<img src="{% static 'common/images/planTrip.png' %}">
+					<!-- Modal Trigger -->
+					<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Plan a Trip!!</a>
+					<p>Proin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequat</p>
+					<!-- Modal Structure -->
+					<div id="modal1" class="modal outer">
+						<div class="modal-content">
+							<h4>Plan My TRIP!!</h4>
+							<p>Enter Trip Details</p>
+							<div class="row inner">
+								<form class="col s12">
+								{% csrf_token %}
+									<div class="row">
+										<div class="input-field col s12">
+											<input placeholder="Enter Your Destination" id="location" type="text" class="validate">
+											<label for="first_name">Location</label>
+										</div>
+									</div>
+									<div class="input-field col s12" >
+										<select id="number">
+											<option value="" disabled selected>Choose your option</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="3">4</option>
+											<option value="3">5</option>
+											<option value="3">6</option>
+											<option value="3">7</option>
+											<option value="3">8</option>
+											<option value="3">9</option>
+											<option value="3">10</option>
+										</select>
+										<label>Number of Days</label>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit_form" onclick="my_js()">Done</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<img src="{% static 'common/images/web-security.png' %}">
+					<h3>Web Security</h3>
+					<p>Proin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequat</p>
+				</div>
+			</main>
+		</section>
+		<section id="portfolio">
+			<header>
+				<h2>OUR PORTFOLIO</h2>
+				<p>Nasrum Minnallahi Wafatahun Qareeb</p>
+			</header>
+			<main>
+				<div>
+					<img src="{% static 'common/images/ebony-ivory.jpg' %}">
+					<h3>Ebony & Ivory</h3>
+					<p>Branding</p>
+				</div>
+				<div>
+					<img src="{% static 'common/images/smart-stationary.jpg' %}">
+					<h3>Smart Stationary</h3>
+					<p>Print Design</p>
+				</div>
+				<div>
+					<img src="{% static 'common/images/portfolio-3.jpg' %}" id="clever-poster">
+					<h3>Clever Poster</h3>
+					<p>Print Design</p>
+				</div>
+				<div>
+					<img src="{% static 'common/images/portfolio-4.jpg' %}">
+					<h3>Vinyl Record</h3>
+					<p>Product Mock-Up</p>
+				</div>
+				<div>
+					<img src="{% static 'common/images/portfolio-5.jpg' %}">
+					<h3>Treehouse Template</h3>
+					<p>Web Design</p>
+				</div>
+				<div>
+					<img src="{% static 'common/images/portfolio-6.jpg' %}">
+					<h3>Burned Logo</h3>
+					<p>Branding</p>
+				</div>
+			</main>
+		</section>
+		<section id="about">
+			<header>
+				<h2>ABOUT US</h2>
+				<p>Nasrum Minnallahi Wafatahun Qareeb</p>
+			</header>
+			<main>
+				<div id="a1">
+					<div class="about-img-desc">
+						<h3>JULY 2010<br>
+							Our Humble Beginnings</h3>
+							<p>Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat</p>
+						</div>
+						<div class="show">
+							<a href="#a1"><img src="{% static 'common/images/about-us-1.jpg' %}"></a>
+						</div>
+						<div class="hide">
+							<a href="#a"><img src="{% static 'common/images/about-us-1.jpg' %}"></a>
+						</div>
+						<div></div>
+					</div>
+					<div id="a2">
+						<div class="about-img-desc">
+							<h3>JANUARY 2011<br>
+								Facing Startup Battles</h3>
+								<p>Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat</p>
+							</div>
+							<div class="show">
+								<a href="#a2"><img src="{% static 'common/images/about-us-2.jpg' %}"></a>
+							</div>
+							<div class="hide">
+								<a href="#a"><img src="{% static 'common/images/about-us-2.jpg' %}"></a>
+							</div>
+							<div></div>
+						</div>
+						<div id="a3">
+							<div class="about-img-desc">
+								<h3>DECEMBER 2012<br>
+									Our Humble Beginnings</h3>
+									<p>Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat</p>
+								</div>
+								<div class="show">
+									<a href="#a3"><img src="{% static 'common/images/about-us-3.jpg' %}"></a>
+								</div>
+								<div class="hide">
+									<a href="#a"><img src="{% static 'common/images/about-us-3.jpg' %}"></a>
+								</div>
+								<div></div>
+							</div>
+							<div id="a4">
+								<div class="about-img-desc">
+									<h3>FEBURARY 2014<br>
+										Enter The Dark Days</h3>
+										<p>Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat Proin iaculis purus consequat</p>
+									</div>
+									<div class="show">
+										<a href="#a4"><img src="{% static 'common/images/about-us-4.jpg' %}"></a>
+									</div>
+									<div class="hide">
+										<a href="#a"><img src="{% static 'common/images/about-us-4.jpg' %}"></a>
+									</div>
+									<div></div>
+								</div>
+								<div>
+									<button>OUR STORY CONTINUES ...</button>	
+								</div>
+								<div id="line"></div>
+							</main>
+						</section>
+						<section id="team">
+							<header>
+								<h2>OUR AMAZING TEAM</h2>
+								<p>Nasrum Minnallahi Wafatahun Qareeb</p>
+							</header>
+							<main>
+								<div>
+									<img src="{% static 'common/images/bill-gates.jpg' %}">
+									<h3>Bill Gates</h3>
+									<h4>Microsoft</h4>
+									<ul>
+										<li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter circle fa-2x"></i></a></li>
+										<li><a href="https://www.facebook.com/"><i class="fa fa-facebook circle fa-2x"></i></a></li>
+										<li><a href="https://in.pinterest.com/"><i class="fa fa-pinterest circle fa-2x"></i></a></li>
+									</ul>
+								</div>
+								<div>
+									<img src="{% static 'common/images/steve-jobs.jpg' %}">
+									<h3>Steve Jobs</h3>
+									<h4>Apple & Pixar</h4>
+									<ul>
+										<li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter circle fa-2x"></i></a></li>
+										<li><a href="https://www.facebook.com/"><i class="fa fa-facebook circle fa-2x"></i></a></li>
+										<li><a href="https://plus.google.com"><i class="fa fa-google-plus circle fa-2x"></i></a></li>
+									</ul>
+								</div>
+								<div>
+									<img src="{% static 'common/images/elon-musk.jpg' %}">
+									<h3>Elon Musk</h3>
+									<h4>Tesla Motors & SpaceX</h4>
+									<ul>
+										<li><a href="https://www.facebook.com/"><i class="fa fa-facebook circle fa-2x"></i></a></li>
+										<li><a href="https://in.pinterest.com/"><i class="fa fa-pinterest circle fa-2x"></i></a></li>
+									</ul>
+								</div>
+								<p>Proin iaculis purus consequatProin iaculis purus consequatProin iaculis purus consequat<br>Proin iaculis purus consequat</p>	
+							</main>
+						</section>
+						<div id="media">
+							<img src="{% static 'common/images/logo-1.jpg' %}">
+							<img src="{% static 'common/images/logo-2.jpg' %}">
+							<img src="{% static 'common/images/logo-3.jpg' %}">
+							<img src="{% static 'common/images/logo-4.jpg' %}">
+						</div>
+						<section id="contact">
+							<header>
+								<h2>CONTACT US</h2>
+								<p>Nasrum Minnallahi Wafatahun Qareeb</p>
+							</header>
+							<div>
+								<button>SEND MESSAGE</button>
+							</div>
+						</section>
+						<footer id="page-footer">
+							<p>&copy Copyright 2016 VARUN AGARWAL</p>
+							<ul>
+								<li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter circle fa-2x"></i></a></li>
+								<li><a href="https://www.facebook.com/"><i class="fa fa-facebook circle fa-2x"></i></a></li>
+								<li><a href="https://in.pinterest.com/"><i class="fa fa-pinterest circle fa-2x"></i></a></li>
+								<li><a href="https://plus.google.com"><i class="fa fa-google-plus circle fa-2x"></i></a></li>
+							</ul>
+						</footer>
+						<script type="text/javascript">
+							$(document).ready(function(){	
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+});
+							$(document).ready(function() {
+								$('select').material_select();
+								var $inner = $('.inner');
+								var height = parseInt($inner.height()) + parseInt($inner.css('top'));  
+								$('.outer').css('height', height);  
+							});
+							
+function my_js()
+{
+	var el = document.getElementById("number");
+	var value = el.options[el.selectedIndex].value;
+	var num_days = el.options[el.selectedIndex].text;
+
+	var location = document.getElementById("location").value;
+	console.log(num_days + " " + location);
+	
+	var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=AIzaSyBnJ7zV4Q5aDyh-T4lgWZf4H7_7AIVMyLY";
+	var lat,long;
+  $.get(url, function(data, status){
+           // alert("Data: " + data + "\nStatus: " + status);
+           lat = data.results[0].geometry.location.lat;
+           long = data.results[0].geometry.location.lng;
+           api(lat, long, location, num_days)
+         });
+  /*
+	now passing lat long to IBM
+  */
+}
+function api(lat, long, location, num_days)
+{
+	console.log(lat);
+  var xhttp = new XMLHttpRequest();
+  url = "https://da88f2f4-1585-48bc-a193-c5180bdb3236:MNLeTN1JCw@twcservice.mybluemix.net/api/weather/v1/geocode/"+ lat + "/" + long + "/forecast/daily/";
+  var json_data;
+  if(num_days<=3)
+  {
+  	url += "3day.json";
+
+  }else if(num_days<=5)
+  {
+  	
+   url += "5day.json";
+ }else
+ {
+  url += "10day.json";
+
+ }
+
+
+ $.get(url, function(data, status){
+          	console.log(data);
+  			func(data,url,lat, long, location, num_days);          
+  });
+ 
+
+}
+
+function func(json_data,url,lat, long, location, num_days)
+{
+	console.log(json_data);
+var average_temp = 0;
+var num_clothe = num_days/2;
+for(var i=0;i<num_days;i++)
+{
+ average_temp += (json_data.forecasts[i].max_temp + json_data.forecasts[i].min_temp)/2;
+}
+
+average_temp /= num_days;
+var data = {
+	"avg_temp": average_temp,"pairs":num_clothe
+}
+console.log('hello');
+$.ajax({
+  type: 'POST',
+  url: 'http://127.0.0.1:8000/trip',
+  crossDomain: true,
+  data: {"avg_temp": average_temp,"pairs":num_clothe},
+  success: function(responseData, textStatus, jqXHR) {
+    var value = responseData.someKey;
+    console.log(responseData);
+  },
+  error: function (responseData, textStatus, errorThrown) {
+    alert('POST failed.');
+  }
+});	
+}
+						</script>
+					</body>
+					</html>

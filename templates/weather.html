@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>My Wardrobe</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'common/css/base_weather.css' %}">
+</head>
+<body>
+	{% for i in tshirts %}
+	<div class="card transition">
+	<h2 class="transition">{{ i.types }}</h2>
+		<p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		<div class="cta-container transition"><a href="#" class="cta">Call to action</a></div>
+		<div class="card_circle transition"></div>
+	</div>
+	{% endfor %}
+</body>
+</html>
