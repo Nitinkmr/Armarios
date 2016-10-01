@@ -285,8 +285,8 @@ function my_js()
 
 	var location = document.getElementById("location").value;
 	console.log(num_days + " " + location);
-	
-	var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=AIzaSyBnJ7zV4Q5aDyh-T4lgWZf4H7_7AIVMyLY";
+	var MyKey = "###############";
+	var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key="+MyKey;
 	var lat,long;
   $.get(url, function(data, status){
            // alert("Data: " + data + "\nStatus: " + status);
@@ -302,7 +302,9 @@ function api(lat, long, location, num_days)
 {
 	console.log(lat);
   var xhttp = new XMLHttpRequest();
-  url = "https://da88f2f4-1585-48bc-a193-c5180bdb3236:MNLeTN1JCw@twcservice.mybluemix.net/api/weather/v1/geocode/"+ lat + "/" + long + "/forecast/daily/";
+  var uName = "username";
+  var pass = "pass";
+  url = uName + ":" + pass + "@twcservice.mybluemix.net/api/weather/v1/geocode/"+ lat + "/" + long + "/forecast/daily/";
   var json_data;
   if(num_days<=3)
   {
